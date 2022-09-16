@@ -12,7 +12,7 @@ app.get('/pokemon', (req, res) =>{
     res.render('Index.jsx', {pokemon})
 })
 app.get('/pokemon/:id', (req, res) =>{
-    res.send(req.params.id);
+    res.render('Show.jsx', {mon : pokemon[req.params.id]});
 })
 app.listen(3000, () =>{
     console.log('listening')
