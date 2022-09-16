@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.send('<h1>Welcome to the Pokemon app!</h1>');
 });
 app.get('/pokemon', (req, res) =>{
-    res.render('Index.jsx')
+    res.render('Index.jsx', {pokemon})
 })
 app.listen(3000, () =>{
     console.log('listening')
